@@ -6,7 +6,9 @@ The SUT is a simple React application that allows users to connect and manage a 
 
 The example specifications are located in the `cypress/e2e` folder.
 
-## How to launch the tests
+It also contains a Documenté config and an example document that can be used to generate the Cypress tests.
+
+## How to generate the tests from the Markdown documentation
 
 First, install the dependencies with:
 
@@ -14,7 +16,17 @@ First, install the dependencies with:
 yarn install
 ```
 
-Then start the SUT application with:
+Then run Documenté with:
+
+```bash
+yarn run documente
+```
+
+This will generate a Cypress test file in the `cypress/e2e` folder.
+
+## How to launch the tests
+
+Start the SUT application with:
 
 ```bash
 yarn start
