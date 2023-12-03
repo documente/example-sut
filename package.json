@@ -1,0 +1,25 @@
+{
+  "name": "phrase-example-sut",
+  "version": "1.0.0",
+  "description": "An example application tested with Documenté and Phrasé",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/documente/example-sut.git"
+  },
+  "author": "pckerneis <pc.kerneis@gmail.com>",
+  "license": "LGPL-3.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"cd packages/client && npm start\" \"cd packages/server && node server.js\"",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "@documente/phrase": "^1.0.0-beta.2",
+    "concurrently": "^8.2.2",
+    "cypress": "^13.5.0"
+  }
+}
