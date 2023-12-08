@@ -1,6 +1,6 @@
-import {withContext} from '@documente/phrase';
+import { CypressRunner } from '@documente/documente';
 
-const { test } = withContext({
+const runner = new CypressRunner({
   loginForm: {
     _selector: '.login-form',
     loginField: 'input[type="text"]',
@@ -33,33 +33,39 @@ const password = 'P455w0rd';
 
 describe('example spec', () => {
   it('should login', () => {
-    test `when I visit "${baseUrl}"
+    runner.run(`when I visit "${baseUrl}"
            and I type "${username}" on login form login field
            and I type "${password}" on password field
-           and I click on login form confirm button
+           and I click login form confirm button
           then welcome message should be visible
            and it should have text "Welcome, ${username}!"
-           and login form should not exist`;
+           and login form should not exist
+          done
+          `);
   });
 
   it('should show an error message when username is missing', () => {
-    test `when I visit "${baseUrl}"
+    runner.run(`when I visit "${baseUrl}"
            and I type "${username}" on login form login field
            and I click on login form confirm button
           then login error message should be visible
-           and it should have text "Please enter a username and password"`;
+           and it should have text "Please enter a username and password"
+          done
+          `);
   });
 
   it('should show an error message when password is missing', () => {
-    test `when I visit "${baseUrl}"
+    runner.run(`When I visit "${baseUrl}"
            and I type "${password}" on login form password field
            and I click on login form confirm button
           then login error message should be visible
-           and it should have text "Please enter a username and password"`;
+           and it should have text "Please enter a username and password"
+          done
+          `);
   });
 
   it('should add a task', () => {
-    test `given task list is empty
+    runner.run(`given task list is empty
             and I login
            when I type "Buy milk" on new task title field
             and I click on add task button
@@ -75,13 +81,13 @@ describe('example spec', () => {
            done
            
            for $element to have {{count}} task:
-           - its children should have length {{count}}
+           - its children should have {{count}} occurrences
            done
-           `;
+           `);
   });
 
   it('should remove a task', () => {
-    test `given task list is empty
+    runner.run(`given task list is empty
             and I login
             and I add a task with title "Buy milk"
            when I click on task with text "Buy milk" delete button
@@ -101,7 +107,7 @@ describe('example spec', () => {
            done
            
            for $element to have {{count}} task:
-           - its children should have length {{count}}
-           done`;
+           - its children should have {{count}} occurrences
+           done`);
   });
 });

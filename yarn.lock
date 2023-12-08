@@ -1308,20 +1308,20 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@documente/documente@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@documente/documente/-/documente-1.0.0-beta.0.tgz#a823dd01f01d4d657cef3f52123ffdeaa1791059"
-  integrity sha512-bnCpaxV57nhEsz6GWneirUQEEdSI/LcLJIhj8n+WVIgh/Nht+ta6Ynx9Vxw/Eh9fPT96RIFiuJOD3Nc+lGrigQ==
+"@documente/documente@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@documente/documente/-/documente-1.0.0-beta.1.tgz#7aecfa171d5b7d41ab93a27aef6bd5e64b95d9ad"
+  integrity sha512-42oi0m8qBc5oLmtGf8civr+5UXgPeeWklRpcnVhKyxPhC/NG4vkY40sFmwOM67kWzdDBZaiXe0/esbMCAOyvsw==
   dependencies:
-    "@documente/phrase" "^1.0.0-beta.2"
+    "@documente/phrase" "^1.0.0-beta.3"
     glob "^10.3.10"
     mustache "^4.2.0"
     yaml "^2.3.4"
 
-"@documente/phrase@^1.0.0-beta.2":
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@documente/phrase/-/phrase-1.0.0-beta.2.tgz#220493e11c938a0d7dcc22345adf3e35376fbb21"
-  integrity sha512-Hx1PjvHWjRsTCe9Jrhz1Mj9OWN9q+Xz5m83nUZJKRQG71QLFrA6DGztHpXxQ3FC6R4ZZ/MsGDKsBwpxZ/9B/1Q==
+"@documente/phrase@^1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@documente/phrase/-/phrase-1.0.0-beta.3.tgz#f06d69df7a9feac879c7430cebb041c2408810e6"
+  integrity sha512-BumbIPykaVrNvmp/tEzdM+YT3crgS/yATlxcdVu2fkj/EkU94+KwVQimI24gEsLMasWMw9d8wMoPIZtdWMt95g==
   dependencies:
     yaml "^2.3.4"
 

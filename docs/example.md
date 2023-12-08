@@ -70,6 +70,6 @@ then task list should have 0 task
 done
 
 for $element to have {{count}} task:
-- its children should have length {{count}}
+- its children should have {{count}} occurrences
 done
 ```
