@@ -6,34 +6,24 @@ The SUT is a simple React application that allows users to login and manage a li
 
 It also contains a Documenté config and an example document that can be used to generate Cypress or Playwright tests.
 
-## How to generate the tests from the Markdown documentation
+## How to run the tests
 
-### Install the dependencies
+### With Cypress
 
-```bash
-yarn install
-```
+1. Install the dependencies with `yarn install`.
 
-### Generate the Cypress tests
+2. Extract Cypress tests with `yarn documente:cypress`.
 
-Then run Documenté with:
+3. Start the SUT application with `yarn start`
 
-```bash
-yarn run documente:cypress
-```
+4. Run the tests with `yarn cypress:run`
 
-This will generate a Cypress test file in the `cypress/e2e` folder.
+### With Playwright
 
-## How to launch the tests
+1. Install the dependencies with `yarn install`.
 
-Start the SUT application with:
+2. Extract Cypress tests with `yarn documente:playwright`.
 
-```bash
-yarn start
-```
+3. Start the SUT application with `yarn start`
 
-You can then run Cypress with:
-
-```bash
-yarn run cypress:open
-```
+4. Run the tests with `yarn playwright:run`
