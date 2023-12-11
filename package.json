@@ -9,18 +9,26 @@
   "author": "pckerneis <pc.kerneis@gmail.com>",
   "license": "LGPL-3.0",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "start": "concurrently \"cd packages/client && npm start\" \"cd packages/server && node server.js\"",
-    "documente:generate": "documente",
+    "documente:cypress": "documente -c documente-cypress.config.yml",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "documente:playwright": "documente -c documente-playwright.config.yml",
+    "playwright:open": "playwright test --ui",
+    "playwright:run": "playwright test"
   },
   "devDependencies": {
-    "@documente/documente": "^1.0.0-beta.1",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.4",
     "concurrently": "^8.2.2",
     "cypress": "^13.5.0"
+  },
+  "dependencies": {
+    "@documente/documente": "^1.0.0-beta.5"
   }
 }

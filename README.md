@@ -2,24 +2,24 @@
 
 This repository contains an example of a SUT (System Under Test) that is tested using the [Documenté](https://github.com/documente) framework and Cypress.
 
-The SUT is a simple React application that allows users to connect and manage a list of tasks.
+The SUT is a simple React application that allows users to login and manage a list of tasks.
 
-The example specifications are located in the `cypress/e2e` folder.
-
-It also contains a Documenté config and an example document that can be used to generate the Cypress tests.
+It also contains a Documenté config and an example document that can be used to generate Cypress or Playwright tests.
 
 ## How to generate the tests from the Markdown documentation
 
-First, install the dependencies with:
+### Install the dependencies
 
 ```bash
 yarn install
 ```
 
+### Generate the Cypress tests
+
 Then run Documenté with:
 
 ```bash
-yarn run documente
+yarn run documente:cypress
 ```
 
 This will generate a Cypress test file in the `cypress/e2e` folder.

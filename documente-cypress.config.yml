@@ -1,0 +1,4 @@
+runner: 'cypress'
+input: 'docs/**/*.md'
+selectors: 'documente/selectors.yaml'
+externals: 'documente/cypress-externals.js'
