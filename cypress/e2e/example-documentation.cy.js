@@ -1,4 +1,4 @@
-import { CypressRunner } from '@documente/documente';
+import { CypressRunner } from '@documente/runner-cypress';
 import externals from '../../documente/cypress-externals.js';
 
 const selectorTree = `
@@ -20,7 +20,9 @@ task list:
   children: .task
 `;
 
-const testRunner = new CypressRunner(selectorTree, externals);
+const env = '';
+
+const testRunner = new CypressRunner(selectorTree, externals, env);
 
 testRunner.add(`
 In order to login:

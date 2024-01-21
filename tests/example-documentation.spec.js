@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { PlaywrightRunner } from '@documente/documente';
+import { PlaywrightRunner } from '@documente/runner-playwright';
 import externals from '../documente/playwright-externals.js';
 
 const selectorTree = `
@@ -21,7 +21,9 @@ task list:
   children: .task
 `;
 
-const testRunner = new PlaywrightRunner(selectorTree, externals);
+const env = '';
+
+const testRunner = new PlaywrightRunner(selectorTree, externals, env);
 
 testRunner.add(`
 In order to login:
