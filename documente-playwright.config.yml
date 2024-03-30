@@ -1,5 +1,5 @@
 runner: playwright
 input: docs/**/*.md
-outputDir: tests
+outputFolder: tests
 selectors: documente/selectors.yaml
 externals: documente/playwright-externals.js
